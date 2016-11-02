@@ -1,0 +1,10 @@
+{{ define "body" }}
+  <h1 class="page-header">Recent Posts</h1>
+  {{ range . }}
+    <div class="post">
+      <a href="{{ .Path }}"><h2>{{ .Title }}</h2></a>
+      <code>Posted at {{ .CreatedAt }}</code>
+      <p>{{ .Content }}</p>
+    </div>
+  {{ end }}
+{{ end }}
